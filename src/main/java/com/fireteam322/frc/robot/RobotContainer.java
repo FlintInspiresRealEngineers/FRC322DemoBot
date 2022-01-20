@@ -15,6 +15,7 @@ import com.fireteam322.frc.robot.commands.DoNothing;
 import com.fireteam322.frc.robot.commands.DriveWithJoystick;
 import com.fireteam322.frc.robot.commands.ForwardAutonomous;
 import com.fireteam322.frc.robot.commands.RunFeeder;
+import com.fireteam322.frc.robot.commands.RunFrontCamera;
 import com.fireteam322.frc.robot.commands.RunIntake;
 import com.fireteam322.frc.robot.commands.RunRearCamera;
 import com.fireteam322.frc.robot.commands.RunShooter;
@@ -26,6 +27,7 @@ import com.fireteam322.frc.robot.subsystems.Dashboard;
 import com.fireteam322.frc.robot.subsystems.Feeder;
 import com.fireteam322.frc.robot.subsystems.Intake;
 import com.fireteam322.frc.robot.subsystems.LED;
+import com.fireteam322.frc.robot.subsystems.FrontCamera;
 import com.fireteam322.frc.robot.subsystems.RearCamera;
 import com.fireteam322.frc.robot.subsystems.RobotPower;
 import com.fireteam322.frc.robot.subsystems.Shooter;
@@ -48,6 +50,7 @@ private final Dashboard m_dashboard = new Dashboard();
 private final Feeder m_feeder = new Feeder();
 private final Intake m_intake = new Intake();
 private final LED m_led = new LED();
+private final FrontCamera m_frontCamera = new FrontCamera();
 private final RearCamera m_rearCamera = new RearCamera();
 private final RobotPower m_robotPower = new RobotPower();
 private final Shooter m_shooter = new Shooter();
@@ -78,6 +81,7 @@ private final JoystickButton m_intakeButton = new JoystickButton(m_manipulatorSt
 
 		m_led.setDefaultCommand(new AutomaticLED(m_led));
 
+		m_frontCamera.setDefaultCommand(new RunFrontCamera(m_frontCamera));
 		m_rearCamera.setDefaultCommand(new RunRearCamera(m_rearCamera));
 
 		m_shooter.setDefaultCommand(new RunShooter(m_shooter, ()->(m_manipulatorStick.getRightTriggerAxis()
