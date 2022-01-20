@@ -81,8 +81,8 @@ public class LED extends SubsystemBase {
 		else blinkRate = 0.0;
 
 		if(DriverStation.getAlliance() == DriverStation.Alliance.Red) {
-			//color = Color.kFirstRed;
-			color = Color.kRed;
+			color = Color.kFirstRed;
+			//color = Color.kRed;
 		}
 		else if(DriverStation.getAlliance() == DriverStation.Alliance.Blue) {
 			color = Color.kFirstBlue;
