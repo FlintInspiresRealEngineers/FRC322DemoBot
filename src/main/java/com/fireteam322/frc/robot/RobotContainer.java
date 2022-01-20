@@ -21,7 +21,6 @@ import com.fireteam322.frc.robot.commands.RunShooter;
 import com.fireteam322.frc.robot.commands.ShooterAutonomous;
 import com.fireteam322.frc.robot.commands.SimpleAutonomous;
 import com.fireteam322.frc.robot.commands.StraightShooterAutonomous;
-import com.fireteam322.frc.robot.subsystems.AddressableLEDs;
 import com.fireteam322.frc.robot.subsystems.Chassis;
 import com.fireteam322.frc.robot.subsystems.Dashboard;
 import com.fireteam322.frc.robot.subsystems.Feeder;
@@ -44,7 +43,6 @@ public class RobotContainer {
 Command m_autoCommand;
 SendableChooser<Command> autonomousChooser = new SendableChooser<>();
 
-private final AddressableLEDs m_AddressableLEDs = new AddressableLEDs();
 private final Chassis m_chassis = new Chassis();
 private final Dashboard m_dashboard = new Dashboard();
 private final Feeder m_feeder = new Feeder();
@@ -78,7 +76,7 @@ private final JoystickButton m_intakeButton = new JoystickButton(m_manipulatorSt
 
 		m_intake.setDefaultCommand(new RunIntake(m_intake, ()->- m_manipulatorStick.getRightY()));
 
-		m_led.setDefaultCommand(new AutomaticLED(m_led, m_AddressableLEDs));
+		m_led.setDefaultCommand(new AutomaticLED(m_led));
 
 		m_rearCamera.setDefaultCommand(new RunRearCamera(m_rearCamera));
 
