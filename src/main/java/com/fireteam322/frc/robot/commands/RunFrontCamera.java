@@ -8,14 +8,14 @@
 package com.fireteam322.frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import com.fireteam322.frc.robot.subsystems.FrontCamera;
+import com.fireteam322.frc.robot.subsystems.RobotCamera;
 
 public class RunFrontCamera extends CommandBase {
-	private final FrontCamera m_frontCamera;
+	private final RobotCamera m_frontCamera;
 	/**
 	 * Creates a new RunFrontCamera.
 	 */
-	public RunFrontCamera(FrontCamera frontCamera) {
+	public RunFrontCamera(RobotCamera frontCamera) {
 		m_frontCamera = frontCamera;
 		// Use addRequirements() here to declare subsystem dependencies.
 		addRequirements(m_frontCamera);
