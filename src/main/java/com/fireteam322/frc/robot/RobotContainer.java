@@ -8,30 +8,9 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
-import com.fireteam322.frc.robot.commands.AutomaticLED;
-import com.fireteam322.frc.robot.commands.BasicAutonomous;
-import com.fireteam322.frc.robot.commands.DashboardUpdater;
-import com.fireteam322.frc.robot.commands.DoNothing;
-import com.fireteam322.frc.robot.commands.DriveWithJoystick;
-import com.fireteam322.frc.robot.commands.ForwardAutonomous;
-import com.fireteam322.frc.robot.commands.RunFeeder;
-import com.fireteam322.frc.robot.commands.RunFrontCamera;
-import com.fireteam322.frc.robot.commands.RunIntake;
-import com.fireteam322.frc.robot.commands.RunRearCamera;
-import com.fireteam322.frc.robot.commands.RunShooter;
-import com.fireteam322.frc.robot.commands.ShooterAutonomous;
-import com.fireteam322.frc.robot.commands.SimpleAutonomous;
-import com.fireteam322.frc.robot.commands.StraightShooterAutonomous;
-import com.fireteam322.frc.robot.subsystems.Chassis;
-import com.fireteam322.frc.robot.subsystems.Dashboard;
-import com.fireteam322.frc.robot.subsystems.Feeder;
-import com.fireteam322.frc.robot.subsystems.Intake;
-import com.fireteam322.frc.robot.subsystems.LED;
-import com.fireteam322.frc.robot.subsystems.RobotCamera;
-import com.fireteam322.frc.robot.subsystems.RobotPower;
-import com.fireteam322.frc.robot.subsystems.Shooter;
-import com.fireteam322.frc.robot.utilities.F310Controller;
-
+import com.fireteam322.frc.robot.commands.*;
+import com.fireteam322.frc.robot.subsystems.*;
+import com.fireteam322.frc.robot.utilities.*;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -49,8 +28,8 @@ private final Dashboard m_dashboard = new Dashboard();
 private final Feeder m_feeder = new Feeder();
 private final Intake m_intake = new Intake();
 private final LED m_led = new LED();
-private final RobotCamera m_frontCamera = new RobotCamera(0);
-private final RobotCamera m_rearCamera = new RobotCamera(1);
+private final RobotCamera m_frontCamera = new RobotCamera("Front Camera", 0);
+private final RobotCamera m_rearCamera = new RobotCamera("Rear Camera", 1);
 private final RobotPower m_robotPower = new RobotPower();
 private final Shooter m_shooter = new Shooter();
 

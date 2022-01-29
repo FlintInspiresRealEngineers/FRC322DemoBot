@@ -15,9 +15,9 @@ public class RobotCamera extends SubsystemBase {
 	/**
 	 * Creates a new FrontCamera.
 	 */
-	public RobotCamera(int port) {
+	public RobotCamera(String name, int port) {
 		//Setup Camera
-		cameraServer = new UsbCamera("Front Camera", port);
+		cameraServer = new UsbCamera(name, port);
 	}
 
 	public void setResolution(int width, int height) {
