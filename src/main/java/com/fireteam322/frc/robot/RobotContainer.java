@@ -97,7 +97,6 @@ private final JoystickButton m_intakeButton = new JoystickButton(m_manipulatorSt
 	private void chooserSetup() {
 		// Add commands to Autonomous SendableChooser
 		autonomousChooser.setDefaultOption("Do Nothing", new DoNothing());
-		autonomousChooser.addOption("Basic Autonomous", new BasicAutonomous(m_chassis));
 		autonomousChooser.addOption("Forward Autonomous", new ForwardAutonomous(m_chassis));
 		autonomousChooser.addOption("Simple Autonomous", new SimpleAutonomous(m_chassis));
 		autonomousChooser.addOption("Shooter Autonomous", new ShooterAutonomous(m_chassis, m_feeder, m_shooter));
