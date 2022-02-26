@@ -30,7 +30,7 @@ private final Intake m_intake = new Intake();
 private final LED m_led = new LED();
 private final RobotCamera m_frontCamera = new RobotCamera("Front Camera", 0);
 private final RobotCamera m_rearCamera = new RobotCamera("Rear Camera", 1);
-private final RobotPower m_robotPower = new RobotPower();
+//private final RobotPower m_robotPower = new RobotPower();
 private final Shooter m_shooter = new Shooter();
 
 private final F310Controller m_driveStick = new F310Controller(Constants.DRIVE_STICK);
