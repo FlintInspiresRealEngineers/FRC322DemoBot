@@ -1,0 +1,25 @@
+{
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/LiveWindow/Chassis": "Subsystem",
+      "/LiveWindow/Dashboard": "Subsystem",
+      "/LiveWindow/Feeder": "Subsystem",
+      "/LiveWindow/FrontCamera": "Subsystem",
+      "/LiveWindow/Intake": "Subsystem",
+      "/LiveWindow/LED": "Subsystem",
+      "/LiveWindow/RearCamera": "Subsystem",
+      "/LiveWindow/RobotPower": "Subsystem",
+      "/LiveWindow/Shooter": "Subsystem",
+      "/LiveWindow/Ungrouped/DifferentialDrive[1]": "DifferentialDrive",
+      "/LiveWindow/Ungrouped/Scheduler": "Scheduler",
+      "/LiveWindow/Ungrouped/navX-Sensor[4]": "Gyro",
+      "/Shuffleboard/Autonomous/Autonomous Mode": "String Chooser"
+    }
+  },
+  "NetworkTables": {
+    "LiveWindow": {
+      "open": true
+    }
+  }
+}
