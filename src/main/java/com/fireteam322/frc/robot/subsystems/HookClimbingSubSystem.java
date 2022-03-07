@@ -41,8 +41,6 @@ public class HookClimbingSubSystem extends SubsystemBase implements MotorInterfa
 
     @Override
     public void run(double speed) {
-        // TODO Auto-generated method stub
-        rearHookMotorGroup.set(speed);
 
     }
 
